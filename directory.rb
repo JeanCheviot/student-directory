@@ -19,7 +19,10 @@ end
 def print(students)
     students.each_with_index { |student, index| 
     index = index + 1
-    puts "#{index}. #{student[:name]} (#{student[:cohort]} cohort)" }
+    if student[:name].downcase.start_with? "g"
+    puts "#{index}. #{student[:name]} (#{student[:cohort]} cohort)" 
+    end
+    }
 end
 
 def print_footer(students)
