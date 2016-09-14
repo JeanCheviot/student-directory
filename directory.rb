@@ -10,10 +10,19 @@ def input_students
     end
     puts "What cohort are you on?"
     cohort = gets.chomp
+    if cohort == ""
+        cohort = "Unassigned"
+    end
     puts "what are your hobbies?"
     hobbies = gets.chomp
+    if hobbies == ""
+        hobbies = "No Hobbies"
+    end
     puts "What is your age?"
     age = gets.chomp
+    if age == ""
+        age = "Undisclosed"
+    end
 
        students << {name: name, cohort: cohort, hobbies: hobbies, age: age}
        puts "Now we have #{students.count} students"
